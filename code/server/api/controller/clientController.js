@@ -9,10 +9,10 @@ const bcrypt = require("bcryptjs");
 
 const registerClient = asyncHandler(async (req, res) =>
 {
-  const { firstName, lastName, email, password } = req.body;
+  const { firstName, lastName, email, password, birthDate, cin , agence, phoneNumber } = req.body;
 
   //   check if any of the fields are empty
-  if (!firstName || !lastName || !email || !password)
+  if(  !firstName || !lastName || !email || !password || !birthDate || !cin || !agence || !phoneNumber)
   {
     res.status(400);
     throw new Error("Please fill in all fields");
@@ -36,6 +36,10 @@ const registerClient = asyncHandler(async (req, res) =>
     firstName,
     lastName,
     email,
+    password,
+    birthDate,
+    cin, agence,
+    phoneNumber,
     password: hashedPassword,
     token: generateToken(),
   });
@@ -141,12 +145,10 @@ const totalClients = asyncHandler(async (req, res) =>
 });
 
 module.exports = {
-  createClient,
   singleClient,
   getClients,
   totalClients,
   updateClient,
-  deleteClient,
   authClient,
   getClient,
   registerClient,
