@@ -22,5 +22,6 @@ Content-Type: application/json
 }
 ###
 # getCar User
-http://localhost:6000/getCar
+http://localhost:6000/admin/getAdmin
+
 

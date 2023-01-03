@@ -31,5 +31,7 @@ router.route("/singleClient/:id").get(singleClient);
 router.route("/totalClients").get(protect, totalClients);
 router.route("/getClients").get(protect, getClients);
 
+
+
 // export route file
 module.exports = router;
