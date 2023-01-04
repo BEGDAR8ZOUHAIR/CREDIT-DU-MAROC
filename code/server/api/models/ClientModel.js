@@ -22,7 +22,6 @@ const clientSchema = mongoose.Schema(
       type: String,
       required: [true, "Please enter your agence"],
     },
-    
     phoneNumber: {
       type: String,
       required: [true, "Please enter your phoneNumber"],
