@@ -3,10 +3,10 @@
 ADMIN API 
 
 POST
-registerAdmin
+registerAdmin :
 
-http://localhost:6000/admin/registerAdmin
-Content-Type: application/json
+-http://localhost:6000/admin/registerAdmin
+
 ```	
 {
   "firstName": "ADMIN",
@@ -17,8 +17,8 @@ Content-Type: application/json
 ```	
 
 POST
-admin login
-http://localhost:6000/admin/login
+admin login: 
+-http://localhost:6000/admin/login
 
 ```	
 
@@ -28,8 +28,8 @@ http://localhost:6000/admin/login
 }
 ```
 
-PUT admin update 
-http://localhost:6000/admin/update/:id
+PUT admin update :
+-http://localhost:6000/admin/update/:id
 ```	
 {
   "firstName": "ADMIN",
@@ -38,25 +38,25 @@ http://localhost:6000/admin/update/:id
   "password": "admin1234"
 }
 ```
-GET admin totalClients
-http://localhost:6000/admin/totalClients
+GET admin totalClients : 
+-http://localhost:6000/admin/totalClients
 
 
-GET Admin getClients
-http://localhost:6000/admin/getClients
+GET Admin getClients :
+-http://localhost:6000/admin/getClients
 
 
-GET admin singleClient
+GET admin singleClient :
 
-http://localhost:6000/admin/singleClient/:id
+-http://localhost:6000/admin/singleClient/:id
 
 
 CLIENT API
 
 
-POST  register client
+POST  register client:
 
-http://localhost:6000/admin/registerAdmin
+-http://localhost:6000/admin/registerAdmin
 
 ```
 {
@@ -66,8 +66,8 @@ http://localhost:6000/admin/registerAdmin
   "password": "admin1234"
 }
 ```
-POST  client login
-  http://localhost:6000/admin/login
+POST  client login :
+ - http://localhost:6000/admin/login
 
 ```
 {
