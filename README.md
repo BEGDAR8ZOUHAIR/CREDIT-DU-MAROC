@@ -18,6 +18,7 @@ registerAdmin :
 
 POST
 admin login: 
+
 -http://localhost:6000/admin/login
 
 ```	
@@ -29,6 +30,7 @@ admin login:
 ```
 
 PUT admin update :
+
 -http://localhost:6000/admin/update/:id
 ```	
 {
@@ -39,6 +41,7 @@ PUT admin update :
 }
 ```
 GET admin totalClients : 
+
 -http://localhost:6000/admin/totalClients
 
 
@@ -67,6 +70,7 @@ POST  register client:
 }
 ```
 POST  client login :
+
  - http://localhost:6000/admin/login
 
 ```
