@@ -17,7 +17,7 @@ const { protect } = require("../middleware/authMiddleware");
 router.route("/login").post(authClient);
 router.route("/registerClient").post(registerClient);
 router.route("/update/:id").put(protect, updateClient);
-router.route("/getClient").get(protect, getClient);
+router.route("/getClient/:id").get(protect, getClient);
 
 // export route file
 module.exports = router;
