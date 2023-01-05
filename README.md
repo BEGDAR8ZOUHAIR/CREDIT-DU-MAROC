@@ -1,5 +1,6 @@
 ###  Credit du Maroc API 
-[Admin]: # (Admin)
+
+ADMIN API 
 
 POST
 registerAdmin
@@ -14,10 +15,13 @@ Content-Type: application/json
   "password": "admin1234"
 }
 ```	
+
 POST
 admin login
 http://localhost:6000/admin/login
+
 ```	
+
 {
      "email": "admin@gmail.com",
      "password": "admin1234"
@@ -26,7 +30,6 @@ http://localhost:6000/admin/login
 
 PUT admin update 
 http://localhost:6000/admin/update/:id
-````
 ```	
 {
   "firstName": "ADMIN",
@@ -48,7 +51,7 @@ GET admin singleClient
 http://localhost:6000/admin/singleClient/:id
 
 
-[Client]: # (Client)
+CLIENT API
 
 
 POST  register client
@@ -71,3 +74,4 @@ POST  client login
     "email": "admin@gmail.com",
   "password": "admin1234"
 }
+```
