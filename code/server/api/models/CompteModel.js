@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 
 const compteSchema = mongoose.Schema(
   {
-    client: {
+    idClient: {
       type: mongoose.Schema.Types.ObjectId,
       required: true,
       ref: 'Client',  
@@ -20,6 +20,11 @@ const compteSchema = mongoose.Schema(
             type: String,
             required: [true, 'Please enter your type'],
         },
+        status: {
+        type: String,
+        required: [true, "Please enter status"],
+       },
+        
         
   },
   {
@@ -28,3 +33,6 @@ const compteSchema = mongoose.Schema(
 )
 
 module.exports = mongoose.model('Compte', compteSchema)
+
+
+

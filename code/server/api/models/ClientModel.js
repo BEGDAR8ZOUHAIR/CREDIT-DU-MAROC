@@ -2,14 +2,11 @@ const mongoose = require("mongoose");
 
 const clientSchema = mongoose.Schema(
   {
-    firstName: {
+    fullName: {
       type: String,
-      required: [true, "Please enter your first name"],
+      required: [true, "Please enter your full name"],
     },
-    lastName: {
-      type: String,
-      required: [true, "Please enter your last name"],
-    },
+    
     cin: {
       type: String,
       required: [true, "Please enter your cin"],

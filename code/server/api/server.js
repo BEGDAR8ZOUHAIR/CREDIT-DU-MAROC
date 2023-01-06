@@ -15,6 +15,7 @@ app.use(cors());
 
 app.use('/admin', require('./routes/adminRoutes'));
 app.use('/client', require('./routes/clientRoutes'));
+app.use('/compte', require('./routes/compteRoute'));
 
 
 app.use(errorHandler)

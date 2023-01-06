@@ -1,5 +1,5 @@
 {
-  "name": "nam-x",
+  "name": "credit-de-maroc",
   "version": "1.0.0",
   "description": "build a modern website for NamX company to showcase their products and services to users and include a back office for administrators to manage pre-orders.",
   "main": "server.js",
@@ -7,7 +7,7 @@
     "start": "node api/server.js ",
     "server": "nodemon api/server.js"
   },
-  "author": "Godfather",
+  "author": "Zouhair",
   "license": "MIT",
   "dependencies": {
     "bcrypt": "^5.1.0",

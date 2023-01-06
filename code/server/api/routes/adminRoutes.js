@@ -16,6 +16,15 @@ const {
   totalClients,
 } = require("../controller/clientController");
 
+const {
+  getComptes,
+  acceptCompte,
+  cancelCompte,
+  singleCompte,
+  totalComptes,
+
+} = require('../controller/CompteController')
+
 //  Protect all routes
 const { protect } = require("../middleware/authMiddleware");
 
@@ -30,6 +39,14 @@ router.route("/getAdmin").get(protect, getAdmin);
 router.route("/singleClient/:id").get(singleClient);
 router.route("/totalClients").get(protect, totalClients);
 router.route("/getClients").get(protect, getClients);
+
+
+// Create route for Comptes
+router.route("/getComptes").get(protect, getComptes);
+router.route("/totalComptes").get(protect, totalComptes);
+router.route("/singleCompte/:id").get(protect, singleCompte);
+router.route("/acceptCompte/:id").put(protect, acceptCompte);
+router.route("/cancelCompte/:id").put(protect, cancelCompte);
 
 
 
