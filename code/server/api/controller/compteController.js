@@ -18,6 +18,10 @@ const newCompte = asyncHandler(async (req, res) =>
         cin,
         agence,
         phoneNumber,
+        rib,
+        solde,
+        type,
+
     } = req.body;
 
     const firstName = fullName.split(" ")[0];
@@ -29,7 +33,11 @@ const newCompte = asyncHandler(async (req, res) =>
         !birthDate ||
         !cin ||
         !agence ||
-        !phoneNumber 
+        !phoneNumber ||
+        !rib ||
+        !solde ||
+        !type
+        
     )
     {
         res.status(400);
@@ -83,7 +91,6 @@ const getComptes = asyncHandler(async (req, res) =>
 {
     const comptes = await Compte.find({})
         .populate("idClient", "fullName")
-        .populate("idCar");
     res.status(200).json(comptes);
 });
 

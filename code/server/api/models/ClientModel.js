@@ -16,6 +16,7 @@ const clientSchema = mongoose.Schema(
       required: [true, "Please enter your birthDate"],
     },
     agence: {
+      type: String,
       required: [true, "Please enter your agence"],
     },
     phoneNumber: {

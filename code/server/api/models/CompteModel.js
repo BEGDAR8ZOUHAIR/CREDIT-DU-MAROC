@@ -32,7 +32,7 @@ const compteSchema = mongoose.Schema(
   }
 )
 
-module.exports = mongoose.model('Compte', compteSchema)
+module.exports = mongoose.model('Compte', compteSchema);
 
 
 

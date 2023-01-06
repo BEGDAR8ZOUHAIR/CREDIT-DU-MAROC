@@ -36,7 +36,6 @@ const registerClient = asyncHandler(async (req, res) =>
   const client = await Client.create({
     fullName,
     email,
-    password,
     birthDate,
     cin,
     agence,
