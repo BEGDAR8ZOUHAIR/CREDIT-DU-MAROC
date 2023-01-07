@@ -7,12 +7,21 @@ const authEmail = process.env.EMAIL;
 const authPassword = process.env.PASS;
 const templatePath = process.env.templatePath;
 
-const transporter = nodemailer.createTransport({
-  service: "gmail",
+// const transporter = nodemailer.createTransport({
+//   service: "gmail",
+//   auth: {
+//     user: authEmail,
+//     pass: authPassword,
+//   },
+// });
+
+var transporter = nodemailer.createTransport({
+  host: "smtp.mailtrap.io",
+  port: 2525,
   auth: {
-    user: authEmail,
-    pass: authPassword,
-  },
+    user: "ca9fa94c9ab547",
+    pass: "38b106ff674f48"
+  }
 });
 
 exports.sendMails = async (email, fullName) => {
