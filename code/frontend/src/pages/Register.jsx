@@ -69,7 +69,6 @@ function Register()
         agence,
         phoneNumber,
         password,
-
       }
 
       dispatch(register(userData))
@@ -149,7 +148,7 @@ function Register()
           </div>
           <div className="form-group">
             <input
-              type="number"
+              type="text"
               className="form-control"
               id="phoneNumber"
               name="phoneNumber"

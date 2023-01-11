@@ -31,8 +31,7 @@ li {
 h1,
 h2,
 h3 {
-  font-weight: 600;
-  margin-bottom: 10px;
+  font-weight: 500;
 }
 
 .container {
@@ -120,20 +119,20 @@ h3 {
   color: #828282;
 }
 
-.goals {
+.compte {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
 }
 
-.goal {
+.compte {
   background-color: #f4f4f4;
   margin: 10px 0;
   padding: 20px 0 10px;
   position: relative;
 }
 
-.goal .close {
+.compte .close {
   position: absolute;
   top: 10px;
   right: 15px;
@@ -141,7 +140,7 @@ h3 {
   border: none;
   background: none;
 }
-.goal .update {
+.compte .update {
   position: absolute;
   top: 10px;
   right: 40px;
@@ -156,11 +155,15 @@ h3 {
   margin-bottom: 5px;
   margin-top: 10px;
 }
+.form{
+  display: flex;
+}
 
 .form,
 .content {
   width: 70%;
   margin: 0 auto;
+  flex-direction: column;
   
 }
 .date{
@@ -174,6 +177,7 @@ h3 {
 
 .form-group {
   margin-bottom: 10px;
+  flex-direction: row;
 
 }
 
@@ -186,12 +190,6 @@ h3 {
   border-radius: 5px;
   margin-bottom: 10px;
   font-family: inherit;
-}
-
-.form-group label {
-  text-align: left;
-  display: block;
-  margin: 0 0 5px 3px;
 }
 
 .btn {
