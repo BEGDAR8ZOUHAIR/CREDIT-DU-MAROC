@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import CompteForm from "../components/CompteForm";
 import CompteItem from "../components/CompteItem";
 import Spinner from "../components/Spinner";
-// import { getComptes, reset } from "../features/comptes/compteSlice";
+import { getComptes, reset } from "../features/comptes/compteSlice";
 
 function Dashboard() {
   const navigate = useNavigate();
@@ -24,10 +24,10 @@ function Dashboard() {
       navigate("/login");
     }
 
-    // dispatch(getComptes());
+    dispatch(getComptes());
 
     return () => {
-      // dispatch(reset());
+      dispatch(reset());
     };
   }, [user, navigate, isError, message, dispatch]);
 

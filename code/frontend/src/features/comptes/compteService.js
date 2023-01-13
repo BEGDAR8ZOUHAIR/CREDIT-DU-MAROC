@@ -1,6 +1,7 @@
 import axios from 'axios'
 
-const API_URL = 'http://localhost:5000/client/'
+const API_URLCLIENT = 'http://localhost:5000/client/'
+const API_URLADMIN = 'http://localhost:5000/admin/'
 
 // Create new compte
 const createCompte = async (compteData, token) =>
@@ -13,55 +14,55 @@ const createCompte = async (compteData, token) =>
 
     console.log("create", compteData);
 
-    const response = await axios.post(API_URL + "newCompte", compteData, config)
+    const response = await axios.post(API_URLCLIENT + "newCompte", compteData, config)
 
     return response.data
 }
 
 // Get user comptes
-// const getComptes = async (token) =>
-// {
-//     const config = {
-//         headers: {
-//             Authorization: `Bearer ${token}`,
-//         },
-//     }
+const getComptes = async (token) =>
+{
+    const config = {
+        headers: {
+            Authorization: `Bearer ${token}`,
+        },
+    }
 
-//     const response = await axios.get(API_URL, config)
+    const response = await axios.get(API_URLADMIN + "getComptes" , config)
 
-//     return response.data
-// }
+    return response.data
+}
 
 // Delete user compte
-// const deleteCompte = async (compteId, token) =>
-// {
-//     const config = {
-//         headers: {
-//             Authorization: `Bearer ${token}`,
-//         },
-//     }
+const deleteCompte = async (compteId, token) =>
+{
+    const config = {
+        headers: {
+            Authorization: `Bearer ${token}`,
+        },
+    }
 
-//     const response = await axios.delete(API_URL + compteId, config)
+    const response = await axios.delete(API_URLADMIN + compteId, config)
 
-//     return response.data
-// }
+    return response.data
+}
 // Update user compte
-// const updateCompte= async (compteId, text, token) =>
-// {
-//     const config = {
-//         headers: {
-//             Authorization: `Bearer ${token}`,
-//         },
-//     }
-//     const response = await axios.put(API_URL + compteId, {text}, config)
-//     return response.data
-// }
+const updateCompte= async (compteId, text, token) =>
+{
+    const config = {
+        headers: {
+            Authorization: `Bearer ${token}`,
+        },
+    }
+    const response = await axios.put(API_URLADMIN + compteId, {text}, config)
+    return response.data
+}
 
 const compteService = {
     createCompte,
-    // getComptes,
-    // deleteCompte,
-    // updateCompte
+    getComptes,
+    deleteCompte,
+    updateCompte
 
 }
 

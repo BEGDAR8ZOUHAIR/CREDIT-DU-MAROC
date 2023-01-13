@@ -1,35 +1,35 @@
 import { useState  } from "react";
-// import { useDispatch } from "react-redux";
-// import { deleteCompte } from "../features/comptes/compteSlice";
-// import { updateCompte } from "../features/comptes/compteSlice";
+import { useDispatch } from "react-redux";
+import { deleteCompte } from "../features/comptes/compteSlice";
+import { updateCompte } from "../features/comptes/compteSlice";
 
 function CompteItem({ compte }) {
   const [id, setId] = useState(compte._id);
-    //  const [fullName, setFullName] = useState(compte.fullName);
-    //  const [email, setEmail] = useState(compte.email);
-    //  const [password, setPassword] = useState(compte.password);
-    //  const [birthDate, setBirthDate] = useState(compte.birthDate);
-    //  const [cin, setCin] = useState(cin.setCin);
-    //  const [agence, setAgence] = useState(compte.agence);
-    //  const [phoneNumber, setPhoneNumber] = useState(compte.phoneNumber);
-    //  const [rib, setRib] = useState(compte.rib);
-    //  const [solde, setSolde] = useState(compte.solde);
-    //  const [type, setType] = useState(compte.type);
+     const [fullName, setFullName] = useState(compte.fullName);
+     const [email, setEmail] = useState(compte.email);
+     const [password, setPassword] = useState(compte.password);
+     const [birthDate, setBirthDate] = useState(compte.birthDate);
+     const [cin, setCin] = useState(cin.setCin);
+     const [agence, setAgence] = useState(compte.agence);
+     const [phoneNumber, setPhoneNumber] = useState(compte.phoneNumber);
+     const [rib, setRib] = useState(compte.rib);
+     const [solde, setSolde] = useState(compte.solde);
+     const [type, setType] = useState(compte.type);
 
-//   const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   const onSubmit = (e) => {
     e.preventDefault();
 
     
-    // const div = document.getElementById(compte._id);
-    // div.style.display = "none";
-    // dispatch(updateCompte({ id, text }));
+    const div = document.getElementById(compte._id);
+    div.style.display = "none";
+    dispatch(updateCompte({ id, fullName }));
   };
 
   return (
     <div className="compte">
-      {/* <div className="title">{fullName}</div>
+      <div className="title">{fullName}</div>
       <div className="title">{email}</div>
       <div className="title">{password}</div>
       <div className="title">{birthDate}</div>
@@ -38,16 +38,16 @@ function CompteItem({ compte }) {
       <div className="title">{agence}</div>
       <div className="title">{rib}</div>
       <div className="title">{solde}</div>
-      <div className="title">{type}</div> */}
-      {/* <button
+      <div className="title">{type}</div> 
+      <button
         onClick={() => dispatch(deleteCompte(compte._id))}
         className="close"
       >
         X
-      </button> */}
-      {/* <button
+      </button>
+      <button
         onClick={() => {
-          setText(compte.text);
+          setFullName(compte.fullName);
           setId(compte._id);
           const div = document.getElementById(compte._id);
           div.style.display = "block";
@@ -55,13 +55,13 @@ function CompteItem({ compte }) {
         className="update"
       >
         Update
-      </button> */}
+      </button>
 
       <div className="date">
         {new Date(compte.createdAt).toLocaleString("en-US")}
       </div>
-      {/* update form */}
-      {/* <form
+       update form
+       <form
         className="update-form"
         style={{ display: "none" }}
         id={compte._id}
@@ -78,7 +78,7 @@ function CompteItem({ compte }) {
         <button className="update-form1" type="submit-form">
           Update
         </button>
-      </form> */}
+      </form>
           
     </div>
   );
